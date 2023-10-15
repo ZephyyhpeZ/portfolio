@@ -1,0 +1,20 @@
+.wrap{width:100%;}
+
+.gradient-text{
+  font-weight: 400;
+  background: linear-gradient(to right, #C7F45A 50%, #7C36E9 50%);
+  background-size: 200% 200%;
+  animation: rainbow 1.5s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip:text;
+  transition: color .2s ease-in-out;
+  text-transform:uppercase;
+}
+.gradient-text:hover{
+  color:rgba(0,0,0,0);
+}
+@keyframes rainbow { 
+  0%{background-position:left}
+  50%{background-position:right}
+  100%{background-position:left}
+}
