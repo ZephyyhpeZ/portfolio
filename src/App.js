@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 8000);
   }, []);
   const blur = {
     // backgroundImage: 'radial-gradient(#000 20%, transparent 10%)',
