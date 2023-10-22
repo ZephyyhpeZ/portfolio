@@ -10,7 +10,7 @@ const Home = () => {
             animate={{ y: 0, opacity: 100 }}
             exit={{ y: 10, opacity: 0, transition: { duration: 0.5 } }}
             transition={{
-              delay: 1.1,
+              delay: 1.4,
               duration: 0.5,
               ease: 'easeInOut',
             }}
@@ -23,7 +23,7 @@ const Home = () => {
             animate={{ y: 0, opacity: 100 }}
             exit={{ y: 10, opacity: 0, transition: { duration: 0.5 } }}
             transition={{
-              delay: 1.4,
+              delay: 1.6,
               duration: 0.5,
 
               ease: 'easeInOut',
@@ -37,7 +37,7 @@ const Home = () => {
             animate={{ y: 0, opacity: 100 }}
             exit={{ y: 10, opacity: 0, transition: { duration: 0.5 } }}
             transition={{
-              delay: 1.6,
+              delay: 1.8,
               duration: 0.5,
 
               ease: 'easeInOut',

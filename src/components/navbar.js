@@ -77,33 +77,71 @@ function Navbar() {
         </m.div>
       </div>
       <m.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 100 }}
-        exit={{ opacity: 0, transition: { duration: 0.5 } }}
-        transition={{
-          delay: 0.9,
-          duration: 1,
-          ease: 'easeInOut',
-        }}
+        // initial={{ opacity: 0 }}
+        // animate={{ opacity: 100 }}
+        // exit={{ opacity: 0, transition: { duration: 0.5 } }}
+        // transition={{
+        //   delay: 0.9,
+        //   duration: 1,
+        //   ease: 'easeInOut',
+        // }}
         className="fixed bottom-10 left-0 w-screen z-50"
       >
         <div className="flex justify-between mx-14 font-light text-sm">
           <div className="flex">
-            <h1 className=" pr-10">
+            <m.h1
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 100 }}
+              exit={{ y: 10, opacity: 0, transition: { duration: 0.5 } }}
+              transition={{
+                delay: 0.9,
+                ease: 'easeInOut',
+              }}
+              className=" pr-10"
+            >
               <a href="#About"> About me </a>
-            </h1>
-            <h1 className=" pr-10">
+            </m.h1>
+            <m.h1
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 100 }}
+              exit={{ y: 10, opacity: 0, transition: { duration: 0.5 } }}
+              transition={{
+                delay: 1,
+                ease: 'easeInOut',
+              }}
+              className=" pr-10"
+            >
               <a href="#Projects"> Projects</a>
-            </h1>
-            <h1 className=" pr-10">
+            </m.h1>
+            {/* <h1 className=" pr-10">
               <a href="#Playground"> Playground </a>
-            </h1>
-            <h1 className=" pr-10">
+            </h1> */}
+            <m.h1
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 100 }}
+              exit={{ y: 10, opacity: 0, transition: { duration: 0.5 } }}
+              transition={{
+                delay: 1.1,
+                ease: 'easeInOut',
+              }}
+              className=" pr-10"
+            >
               <a href="#Contact"> Contact </a>
-            </h1>
+            </m.h1>
           </div>
 
-          <h2 className=" font-light">v0.0.1</h2>
+          <m.h2
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 100 }}
+            exit={{ y: 10, opacity: 0, transition: { duration: 0.5 } }}
+            transition={{
+              delay: 0.9,
+              ease: 'easeInOut',
+            }}
+            className=" font-light"
+          >
+            v0.0.1
+          </m.h2>
         </div>
       </m.div>
     </div>

@@ -1,78 +1,79 @@
 import React, { useContext, useState } from "react";
-// import { ColorPaletteContext } from './colorPalettesContext';
+import { ColorPaletteContext } from './colorPalettesContext';
 
 const TwoCircle = () => {
-  // const { colorPalettes, currentColorPaletteIndex, togglePalette } = useContext(ColorPaletteContext);
-  // const currentPalette = colorPalettes[currentColorPaletteIndex];
-  // const [clicked, setClicked] = useState(false);
+  const { colorPalettes, currentColorPaletteIndex, togglePalette } = useContext(ColorPaletteContext);
+  const currentPalette = colorPalettes[currentColorPaletteIndex];
+  const [clicked, setClicked] = useState(false);
 
-  // const handleClick = () => {
-  //   setClicked(true);
+  const handleClick = () => {
+    setClicked(true);
 
-  //   setTimeout(() => {
-  //     setTimeout(() => {
-  //       togglePalette()
-  //       setClicked(false);
-  //     }, 100);
-  //   }, 300);
-  // };
+    setTimeout(() => {
+      setTimeout(() => {
+        togglePalette()
+        setClicked(false);
+      }, 100);
+    }, 300);
+  };
 
   const circleStyle = {
     transition: "fill 0.5s ease-in-out",
   };
 
   return (
-    // <svg
-    //   width="33"
-    //   height="22"
-    //   viewBox="0 0 33 22"
-    //   fill="none"
-    //   xmlns="http://www.w3.org/2000/svg"
-    //   onClick={handleClick}
-    // >
-    //   <circle
-    //     className={clicked ? "secondaryColor" : ""}
-    //     style={circleStyle}
-    //     cx="11"
-    //     cy="11"
-    //     r="11"
-    //     transform="matrix(-1 0 0 1 33 0)"
-    //     fill={currentPalette[1]}
-    //   />
-    //   <circle
-    //     className={clicked ? "primaryColor" : ""}
-    //     style={circleStyle}
-    //     cx="11"
-    //     cy="11"
-    //     r="11"
-    //     transform="matrix(-1 0 0 1 22 0)"
-    //     fill={currentPalette[0]}
-    //   />
-    // </svg>
     <svg
+      className=" cursor-pointer"
       width="33"
-      height="28"
+      height="22"
       viewBox="0 0 33 22"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onClick={handleClick}
     >
       <circle
-        className=" bg-slate-400"
-        fill="white"
+        className={clicked ? 'secondaryColor' : ''}
+        style={circleStyle}
         cx="11"
         cy="11"
         r="11"
         transform="matrix(-1 0 0 1 33 0)"
+        fill={currentPalette[1]}
       />
       <circle
-        className=" bg-white"
-        fill="white"
+        className={clicked ? 'primaryColor' : ''}
+        style={circleStyle}
         cx="11"
         cy="11"
         r="11"
         transform="matrix(-1 0 0 1 22 0)"
+        fill={currentPalette[0]}
       />
     </svg>
+    // <svg
+    //   width="33"
+    //   height="28"
+    //   viewBox="0 0 33 22"
+    //   fill="none"
+    //   xmlns="http://www.w3.org/2000/svg"
+    // >
+    //   <circle
+    //     className=" bg-slate-400"
+    //     fill="white"
+    //     cx="11"
+    //     cy="11"
+    //     r="11"
+    //     transform="matrix(-1 0 0 1 33 0)"
+    //   />
+    //   <circle
+    //     className=" bg-white"
+    //     fill="white"
+    //     cx="11"
+    //     cy="11"
+    //     r="11"
+    //     transform="matrix(-1 0 0 1 22 0)"
+    //   />
+    // </svg>
   );
 };
 

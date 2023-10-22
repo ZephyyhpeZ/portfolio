@@ -1,13 +1,13 @@
 {
-  "0": {
+  "first": {
+    "title": "Pathfinding visualization",
+    "src": "./images/alik.png"
+  },
+  "second": {
     "title": "John Doe",
     "src": "./images/alik.png"
   },
-  "2": {
-    "title": "John Doe",
-    "src": "./images/alik.png"
-  },
-  "3": {
+  "third": {
     "title": "John Doe",
     "src": "./images/alik.png"
   }
