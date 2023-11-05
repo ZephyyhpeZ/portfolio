@@ -23,9 +23,7 @@ const TwoCircle = () => {
 
   return (
     <svg
-      className=" cursor-pointer"
-      width="33"
-      height="22"
+      className="lg:w-[33px] lg:h-[22px] w-[40px] h-[29px] cursor-pointer"
       viewBox="0 0 33 22"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

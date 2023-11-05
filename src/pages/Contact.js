@@ -11,11 +11,11 @@ function Contact() {
 
   return (
     <div className="flex justify-center">
-      <div className="  my-[300px] w-[1220px] ">
+      <div className="  my-[300px] lg:w-[1220px] w-[300px] ">
         <m.div
           ref={ref}
           id="Contact"
-          className="text-[130px] leading-[150px] font-bold mb-[30px] border-b"
+          className="lg:text-[130px] lg:leading-[150px] text-[65px] leading-[60px] font-bold mb-[20px] border-b"
           // style={{ color: currentPalette[0], }}
         >
           {isInView ? (
@@ -42,10 +42,10 @@ function Contact() {
                 }
               : {
                   opacity: 0,
-                  x: 100,
+                  x: 10,
                 }
           }
-          className="text-[50px] leading-[50px] mb-[70px] underline"
+          className=" lg:text-[50px] lg:leading-[50px] text-[20px] leading-[20px] mb-[70px] underline "
         >
           <a href="">iim.imanuel@gmail.com</a>
         </m.div>
@@ -87,7 +87,7 @@ function Contact() {
                     y: 10,
                   }
             }
-            className="mr-20 underline underline-offset-4"
+            className="lg:mr-20 mr-10 underline underline-offset-4"
           >
             <a href="">Github</a>
           </m.div>
@@ -107,7 +107,7 @@ function Contact() {
                     y: 10,
                   }
             }
-            className="mr-20 underline underline-offset-4"
+            className="lg:mr-20 mr-10 underline underline-offset-4"
           >
             <a href="www.linkedin.com/in/imanuel-iim">Linkedin</a>
           </m.div>
@@ -128,7 +128,7 @@ function Contact() {
                     y: 10,
                   }
             }
-            className="mr-20 underline underline-offset-4"
+            className="lg:mr-20 mr-10 underline underline-offset-4"
           >
             <a href="https://www.instagram.com/iimimanuel/">Instagram</a>
           </m.div>

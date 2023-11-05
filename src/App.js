@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 8000);
+    }, 500);
   }, []);
   const blur = {
     // backgroundImage: 'radial-gradient(#000 20%, transparent 10%)',
@@ -56,7 +56,7 @@ function App() {
           <Loading />
         ) : (
           // <Testing>
-          
+
           // </Testing>
           <div>
             <Navbar />
@@ -70,7 +70,7 @@ function App() {
                 ease: 'easeInOut',
               }}
               style={blur}
-              className=" fixed h-[20px] w-screen z-40"
+              className=" fixed lg:h-[20px] h-[10px] w-screen z-40"
             />
             <m.div
               initial={{ opacity: 0 }}
@@ -82,7 +82,7 @@ function App() {
                 ease: 'easeInOut',
               }}
               style={blur}
-              className=" fixed h-screen w-[20px]  z-40"
+              className=" fixed h-screen w-[10px] lg:w-[20px]  z-40"
             />
             <m.div
               initial={{ opacity: 0 }}
@@ -94,7 +94,7 @@ function App() {
                 ease: 'easeInOut',
               }}
               style={blur}
-              className=" fixed h-screen w-[20px] right-0  z-40"
+              className=" fixed h-screen w-[10px] lg:w-[20px] right-0 z-40"
             />
             <m.div
               initial={{ opacity: 0 }}
@@ -106,15 +106,13 @@ function App() {
                 ease: 'easeInOut',
               }}
               style={blur}
-              className=" fixed h-[80px] bottom-0 w-screen z-40"
+              className=" fixed lg:h-[80px] h-[65px] bottom-0 w-screen z-40"
             />
 
             <Home />
             <About />
             <Projects />
             <Contact/>
-
-         
           </div>
         )}
       </div>

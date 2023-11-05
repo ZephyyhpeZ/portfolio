@@ -5,6 +5,7 @@ import imanuel from '../images/imanuel.png';
 import imanuel2 from '../images/imanuel_2.png';
 import imanuel3 from '../images/imanuel_3.png';
 import imanuel4 from '../images/imanuel_4.png';
+import imanuel5 from '../images/imanuel_5.png';
 const About = () => {
     const { colorPalettes, currentColorPaletteIndex, togglePalette } =
       useContext(ColorPaletteContext);
@@ -30,11 +31,14 @@ const About = () => {
 //   }, [isInView]);
 
   return (
-    <div id="About" className=" flex justify-center">
-      <div className=" mt-[80px] mb-[150px] w-[1100px]">
+    <div id="About" className=" flex justify-center ">
+      <div className=" lg:mt-[80px] lg:mb-[150px] lg:w-[1100px] w-[300px] mb-[150px]">
         <div>
           <div className="text-[100px] overflow-hidden flex whitespace-nowrap relative">
-            <div className="absolute bg-white w-[50px] z-30" style={blur}>
+            <div
+              className="absolute bg-white lg:w-[50px] z-30 w-[20px]"
+              style={blur}
+            >
               &nbsp;
             </div>
             <m.div
@@ -66,7 +70,7 @@ const About = () => {
               About me. About me. About me. About me.
             </m.div>
             <div
-              className="absolute bg-white w-[50px] z-30 right-0"
+              className="absolute bg-white lg:w-[50px] w-[20px] z-30 right-0"
               style={blur}
             >
               &nbsp;
@@ -90,7 +94,7 @@ const About = () => {
                       opacity: 0,
                     }
               }
-              className="w-[1000px]"
+              className="lg:w-[1000px] w-[300px]"
             />
           </center>
         </div>
@@ -116,11 +120,11 @@ const About = () => {
               : { y: 10, opacity: 0 }
           }
           ref={ref}
-          className="flex mt-8 justify-between text-justify "
+          className="flex lg:mt-8 lg:justify-between text-justify lg:flex-row flex-col mt-3"
         >
-          <div className="w-[50px] "></div>
-          <div className="w-[450px] text-sm">
-            <p className="leading-7">
+          <div className="lg:w-[50px] "></div>
+          <div className="lg:w-[450px] text-sm w-[300px] font-medium text-slate-200">
+            <p className="leading-7 ">
               Hello! I'm Imanuel, currently in my 7th semester at kalbis
               Institute pursuing a major in Informatics with specialize major in
               Soft Computing. Currently I'm busy with internship, where I'm
@@ -130,17 +134,26 @@ const About = () => {
               computer science with things that interest me.
             </p>
             <br />
-            <p>Programming lagguages:</p>
-            <ul className="list-disc">
-              <li>Coffee</li>
-              <li>Tea</li>
-              <li>Milk</li>
+            <p>Programming langguages and frameworks:</p>
+            <ul
+              className="list-none mt-5 grid grid-cols-2 gap-y-2 gap-x-5 font-light transition ease-in-out"
+              style={{ color: currentPalette[1] }}
+            >
+              <li> Node.js</li>
+              <li> React</li>
+              <li> Express</li>
+              <li> Php</li>
+        
             </ul>
           </div>
 
-          <div className="w-[500px]">
+          <div className="lg:w-[500px] lg:mt-0 w-[300px] mt-8">
             <center>
-              <img className=" rounded-xl w-[300px]" src={imanuel3} alt="" />
+              <img
+                className=" rounded-xl lg:w-[300px] w-[200px] grayscale hover:grayscale-0 transition ease-in-out"
+                src={imanuel3}
+                alt=""
+              />
             </center>
           </div>
           <div className="w-[50px] "></div>

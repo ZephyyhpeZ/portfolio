@@ -5,23 +5,23 @@ function Navbar() {
     <div className="Navbar">
       <m.div
         initial={{ top: '50%' }}
-        animate={{ top: 20 }}
+        animate={{ top: '' }}
         exit={{ bottom: '50%', transition: { duration: 0.5 } }}
         transition={{
           duration: 1,
           ease: 'easeInOut',
         }}
-        className="fixed top-5 w-screen border-r border-b border-[#222222] z-50"
+        className="fixed w-screen border-r border-b border-[#222222] z-50 top-2 lg:top-5"
       />
       <m.div
         initial={{ bottom: '50%' }}
-        animate={{ bottom: 0 }}
+        animate={{ bottom: '' }}
         exit={{ bottom: '50%', transition: { duration: 0.5 } }}
         transition={{
           duration: 1,
           ease: 'easeInOut',
         }}
-        className="fixed w-screen mb-5 border-r border-b border-[#222222] z-50"
+        className="fixed w-screen border-r bottom-0 border-b border-[#222222] z-50 mb-2 lg:mb-5"
       />
       <m.div
         initial={{ bottom: '-5%', opacity: 0 }}
@@ -32,32 +32,30 @@ function Navbar() {
           delay: 0.7,
           ease: 'easeInOut',
         }}
-        className="fixed mb-20 w-screen border-l border-b border-[#222222] z-50"
+        className="fixed w-screen border-l border-b border-[#222222] z-50 mb-16 lg:mb-20"
       />
       <m.div
         initial={{ left: '50%' }}
-        animate={{ left: 20 }}
+        animate={{ left: '' }}
         exit={{ left: '50%', transition: { duration: 0.5 } }}
         transition={{
           duration: 1,
           ease: 'easeInOut',
         }}
-        className="fixed top-0 left-5 h-screen border-r border-b border-[#222222] z-50"
+        className="fixed top-0 h-screen border-r border-b border-[#222222] z-50 left-2 lg:left-5"
       />
       <m.div
         initial={{ right: '50%' }}
-        animate={{ right: 0 }}
+        animate={{ right: '' }}
         exit={{ right: '50%', transition: { duration: 0.5 } }}
         transition={{
           duration: 1,
           ease: 'easeInOut',
         }}
-        className="fixed top-0 right-0 mr-5 h-screen border-l border-b border-[#222222] z-50"
+        className="fixed top-0 right-0 h-screen border-l border-b border-[#222222] z-50 mr-2 lg:mr-5"
       />
-      {/* <div className="fixed top-0  mt-7">
-        <div className="flex justify-between mx-14"></div>
-      </div> */}
-      <div className="fixed top-8 left-0 w-screen z-50">
+
+      <div className="fixed z-50 left-0 top-4 w-screen lg:top-8 lg:w-screen">
         <m.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 100 }}
@@ -67,9 +65,9 @@ function Navbar() {
             duration: 1,
             ease: 'easeInOut',
           }}
-          className="flex justify-between mx-14"
+          className="flex justify-between mx-5 lg:mx-14 "
         >
-          <h1 className="text-xl">
+          <h1 className="lg:text-xl text-3xl">
             <a href="#Home">IIW</a>
           </h1>
 
@@ -85,9 +83,9 @@ function Navbar() {
         //   duration: 1,
         //   ease: 'easeInOut',
         // }}
-        className="fixed bottom-10 left-0 w-screen z-50"
+        className="fixed z-50 left-0 bottom-7 w-screen lg:bottom-10 lg:w-screen"
       >
-        <div className="flex justify-between mx-14 font-light text-sm">
+        <div className="flex justify-between lg:mx-14 mx-7 font-light text-sm">
           <div className="flex">
             <m.h1
               initial={{ y: 10, opacity: 0 }}

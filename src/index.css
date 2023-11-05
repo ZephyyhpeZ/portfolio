@@ -33,3 +33,9 @@ code {
   background-color: transparent; 
 
 }
+
+li::before {
+  content: "♦";
+  font-size: 12px;
+  line-height: 12px;
+}
