@@ -34,8 +34,8 @@ code {
 
 }
 
-li::before {
+/* li::before {
   content: "♦";
   font-size: 12px;
   line-height: 12px;
-}
+} */

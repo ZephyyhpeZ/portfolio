@@ -1,7 +1,7 @@
 import { useInView, motion as m, useAnimation } from 'framer-motion';
 import { ColorPaletteContext } from '../components/colorPalettesContext';
 import { useRef, useEffect, useContext } from 'react';
-import data from '../data.json';
+import data from '../projectsData.json';
 import alik from '../images/alik.png';
 
 
@@ -72,7 +72,7 @@ const controls = useAnimation();
             }
             className="flex  overflow-x-scroll overflow-y-hidden  w-full lg:ml-10 ml-2"
           >
-            {Object.keys(data).map((item, index) => (
+            {/* {Object.keys(data).map((item, index) => (
               <m.div
                 animate={
                   isInView
@@ -99,7 +99,7 @@ const controls = useAnimation();
                   {data[item].title}
                 </div>
               </m.div>
-            ))}
+            ))} */}
             <m.div
               style={blur}
               className="absolute lg:min-w-[20px] h-[350px] min-w-[10px] "

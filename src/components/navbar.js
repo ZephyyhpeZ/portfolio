@@ -15,7 +15,7 @@ function Navbar() {
       />
       <m.div
         initial={{ bottom: '50%' }}
-        animate={{ bottom: '' }}
+        animate={{ bottom: '0%' }}
         exit={{ bottom: '50%', transition: { duration: 0.5 } }}
         transition={{
           duration: 1,
@@ -36,17 +36,17 @@ function Navbar() {
       />
       <m.div
         initial={{ left: '50%' }}
-        animate={{ left: '' }}
+        animate={{ left: '0%' }}
         exit={{ left: '50%', transition: { duration: 0.5 } }}
         transition={{
           duration: 1,
           ease: 'easeInOut',
         }}
-        className="fixed top-0 h-screen border-r border-b border-[#222222] z-50 left-2 lg:left-5"
+        className="fixed top-0 h-screen border-r border-b border-[#222222] z-50 ml-2 lg:ml-5"
       />
       <m.div
         initial={{ right: '50%' }}
-        animate={{ right: '' }}
+        animate={{ right: '0%' }}
         exit={{ right: '50%', transition: { duration: 0.5 } }}
         transition={{
           duration: 1,
@@ -138,7 +138,7 @@ function Navbar() {
             }}
             className=" font-light"
           >
-            v0.0.1
+            v0.0.1 (DESKTOP)
           </m.h2>
         </div>
       </m.div>

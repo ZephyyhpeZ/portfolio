@@ -1,7 +1,11 @@
 import Navbar from './components/navbar';
 import Home from './pages/Home';
+import Introduction from './pages/Introduction';
 import About from './pages/About';
-import Projects from './pages/Projects';
+import About1 from './pages/About1';
+import Experiences from './pages/Experiences';
+// import Projects from './pages/Projects';
+import Projects1 from './pages/Projects1';
 import Playground from './pages/Contact';
 import Loading from './pages/loading';
 import Contact from './pages/Contact';
@@ -108,11 +112,14 @@ function App() {
               style={blur}
               className=" fixed lg:h-[80px] h-[65px] bottom-0 w-screen z-40"
             />
-
-            <Home />
+            <Introduction />
+            <About1 />
+            <Experiences />
+            <Projects1 />
+            <Contact />
+            {/* <Home />
             <About />
-            <Projects />
-            <Contact/>
+            <Contact/> */}
           </div>
         )}
       </div>

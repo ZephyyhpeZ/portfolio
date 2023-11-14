@@ -10,16 +10,25 @@ function Contact() {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className="flex justify-center">
-      <div className="  my-[300px] lg:w-[1220px] w-[300px] ">
+    <div id="Contact" className="flex justify-center">
+      <div className="  mb-[250px] lg:w-[1220px] w-[300px] ">
         <m.div
           ref={ref}
           id="Contact"
-          className="lg:text-[130px] lg:leading-[150px] text-[65px] leading-[60px] font-bold mb-[20px] border-b"
-          // style={{ color: currentPalette[0], }}
+          className="lg:text-[120px] lg:leading-[120px] text-[65px] leading-[60px] font-black mb-[20px]"
+          style={{ color: currentPalette[0] }}
         >
           {isInView ? (
-            <AnimatedText text={'Connect with me'} />
+            <div>
+              <AnimatedText
+                className="absolute translate-y-[-10px] mix-blend-difference"
+                text={'CONNECT WITH ME'}
+              />
+              <AnimatedText
+                className=" text-slate-50"
+                text={'CONNECT WITH ME'}
+              />
+            </div>
           ) : (
             <div>&nbsp;</div>
           )}
@@ -89,7 +98,7 @@ function Contact() {
             }
             className="lg:mr-20 mr-10 underline underline-offset-4"
           >
-            <a href="">Github</a>
+            <a href="https://github.com/ZephyyhpeZ">Github</a>
           </m.div>
           <m.div
             animate={
@@ -109,7 +118,7 @@ function Contact() {
             }
             className="lg:mr-20 mr-10 underline underline-offset-4"
           >
-            <a href="www.linkedin.com/in/imanuel-iim">Linkedin</a>
+            <a href="https://www.linkedin.com/in/imanuel-iim">Linkedin</a>
           </m.div>
 
           <m.div

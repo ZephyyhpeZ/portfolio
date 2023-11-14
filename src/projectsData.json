@@ -1,0 +1,23 @@
+{
+  "1": {
+    "title": "Pathfinding visualization",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non velit nec arcu convallis tempus. Aenean at justo nec arcu luctus viverra. Proin id fermentum velit. Vivamus scelerisque,justo eu volutpat consequat, nunc justo hendrerit erat, nonvarius risus justo sit amet libero. Suspendisse ac posuerejusto. Fusce vitae felis vel lectus scelerisque vulputate.",
+    "src": "../images/hanni.png",
+    "utilities": {
+      "first": "PHP",
+      "second": "Node.js",
+      "third": "Express"
+    }
+  },
+  "2": {
+    "title": "Pathfinding visualization",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non velit nec arcu convallis tempus. Aenean at justo nec arcu luctus viverra. Proin id fermentum velit. Vivamus scelerisque,justo eu volutpat consequat, nunc justo hendrerit erat, nonvarius risus justo sit amet libero. Suspendisse ac posuerejusto. Fusce vitae felis vel lectus scelerisque vulputate.",
+    "src": "../images/hanni.png",
+    "utilities":{
+      "first": "PHP",
+      "second": "Node.js",
+      "third": "Express"
+    }
+    
+  }
+}
