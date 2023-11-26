@@ -54,8 +54,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="portfolio" element={<Layout />} />
-            <Route path="Testing" element={<Testing />} />
-            <Route path="404" element={<FourOfour />} />
+            <Route path="portfolio/Testing" element={<Testing />} />
+            <Route path="portfolio/404" element={<FourOfour />} />
           </Routes>
         </BrowserRouter>
       )}
