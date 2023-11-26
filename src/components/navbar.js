@@ -75,14 +75,6 @@ function Navbar() {
         </m.div>
       </div>
       <m.div
-        // initial={{ opacity: 0 }}
-        // animate={{ opacity: 100 }}
-        // exit={{ opacity: 0, transition: { duration: 0.5 } }}
-        // transition={{
-        //   delay: 0.9,
-        //   duration: 1,
-        //   ease: 'easeInOut',
-        // }}
         className="fixed z-50 left-0 bottom-7 w-screen lg:bottom-10 lg:w-screen"
       >
         <div className="flex justify-between lg:mx-14 mx-7 font-light text-sm">
@@ -111,9 +103,7 @@ function Navbar() {
             >
               <a href="#Projects"> Projects</a>
             </m.h1>
-            {/* <h1 className=" pr-10">
-              <a href="#Playground"> Playground </a>
-            </h1> */}
+         
             <m.h1
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 100 }}
@@ -136,9 +126,9 @@ function Navbar() {
               delay: 0.9,
               ease: 'easeInOut',
             }}
-            className=" font-light"
+            className=" font-light lg:text-[14px]"
           >
-            v0.0.1 (DESKTOP)
+            v0.0.1
           </m.h2>
         </div>
       </m.div>

@@ -15,7 +15,7 @@ const Home = () => {
           <center>
             <div className="relative">
               <m.div
-                className="lg:text-[25px]"
+                className="lg:text-[25px] text-[15px]"
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 100 }}
                 exit={{ y: 10, opacity: 0, transition: { duration: 0.5 } }}
@@ -28,7 +28,7 @@ const Home = () => {
                 INTRODUCTION
               </m.div>
               <m.div
-                className=" lg:text-[25px] mix-blend-difference absolute top-[-5px] text-center left-[41%]"
+                className=" lg:text-[25px] lg:left-[41%] text-[15px] left-[35%] mix-blend-difference absolute top-[-5px] text-center "
                 style={{ color: currentPalette[0] }}
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 100 }}
@@ -56,7 +56,7 @@ const Home = () => {
               }}
             />
             <m.div
-              className=" lg:text-[150px] lg:leading-[150px] lg:mb-[15px] font-black tracking-tighter "
+              className=" lg:text-[150px] lg:leading-[150px] lg:mb-[15px] text-[70px] mb-[15px] font-black tracking-tighter "
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 100 }}
               exit={{ y: 10, opacity: 0, transition: { duration: 0.5 } }}
@@ -81,7 +81,7 @@ const Home = () => {
               }}
             />
             <m.div
-              className="mt-[20px]"
+              className="mt-[20px] lg:text-[16px] text-[12px]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 100 }}
               transition={{

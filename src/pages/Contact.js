@@ -15,7 +15,7 @@ function Contact() {
         <m.div
           ref={ref}
           id="Contact"
-          className="lg:text-[120px] lg:leading-[120px] text-[65px] leading-[60px] font-black mb-[20px]"
+          className="lg:text-[120px] lg:leading-[120px] text-[55px] leading-[60px] font-black mb-[20px]"
           style={{ color: currentPalette[0] }}
         >
           {isInView ? (

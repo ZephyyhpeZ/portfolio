@@ -1,23 +1,26 @@
 {
   "1": {
-    "title": "Pathfinding visualization",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non velit nec arcu convallis tempus. Aenean at justo nec arcu luctus viverra. Proin id fermentum velit. Vivamus scelerisque,justo eu volutpat consequat, nunc justo hendrerit erat, nonvarius risus justo sit amet libero. Suspendisse ac posuerejusto. Fusce vitae felis vel lectus scelerisque vulputate.",
-    "src": "../images/hanni.png",
+    "title": "Pathfinding Visualization",
+    "desc": "A web based pathfinding algorithm visualization with an interactive interface that allows users to observe and analyze the the workings of diverse pathfinding algorithm. (I made this in python at first then i turned it into web Still in Progress) ",
+    "src": "/images/image.png",
     "utilities": {
-      "first": "PHP",
-      "second": "Node.js",
-      "third": "Express"
-    }
+      "first": "Node.js",
+      "second": "React",
+      "third": "Tailwind"
+    },
+    "link": "Testing"
+
   },
   "2": {
-    "title": "Pathfinding visualization",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non velit nec arcu convallis tempus. Aenean at justo nec arcu luctus viverra. Proin id fermentum velit. Vivamus scelerisque,justo eu volutpat consequat, nunc justo hendrerit erat, nonvarius risus justo sit amet libero. Suspendisse ac posuerejusto. Fusce vitae felis vel lectus scelerisque vulputate.",
-    "src": "../images/hanni.png",
+    "title": "-",
+    "desc": "-",
+    "src": "/images/hanni.png",
     "utilities":{
       "first": "PHP",
       "second": "Node.js",
       "third": "Express"
-    }
+    },
+    "link": "404"
     
   }
 }

@@ -1,7 +1,6 @@
 import { useScroll, useTransform, useInView, motion as m } from 'framer-motion';
 import { ColorPaletteContext } from '../components/colorPalettesContext';
 import { useRef, useEffect, useContext } from 'react';
-import imanuel4 from '../images/imanuel_4.png';
 const About = () => {
   const { colorPalettes, currentColorPaletteIndex, togglePalette } =
     useContext(ColorPaletteContext);
@@ -13,10 +12,10 @@ const About = () => {
 
   return (
     <div id="About" className=" flex justify-center ">
-      <div className=" lg:mt-[80px] lg:mb-[150px] lg:w-[1200px] w-[300px] mb-[150px]">
-        <div className="relative text-right mb-[50px]">
+      <div className=" lg:mt-[80px] lg:mb-[150px] lg:w-[1200px] w-[300px] mb-[200px]">
+        <div className="relative text-right lg:mb-[50px] mb-[30px]">
           <m.div
-            className="lg:text-[20px]"
+            className="lg:text-[20px] text-[14px] text-center "
             animate={
               isInView
                 ? {
@@ -39,7 +38,7 @@ const About = () => {
             ABOUT ME
           </m.div>
           <m.div
-            className=" lg:text-[20px] mix-blend-difference absolute top-[-10px] text-right left-[91.88%]"
+            className=" lg:text-[20px] lg:left-[46%] left-[39%] text-[14px] mix-blend-difference absolute lg:top-[-10px] top-[-5px] text-right "
             style={{ color: currentPalette[0] }}
             animate={
               isInView
@@ -63,10 +62,10 @@ const About = () => {
             ABOUT ME
           </m.div>
         </div>
-        <div className="absolute lg:w-[300px] ml-[900px]">
+        <div className="lg:absolute lg:w-[300px] lg:ml-[900px] lg:mb-0 lg:mx-[0px] w-[250px] mx-auto mb-[50px]">
           <m.img
             className="grayscale hover:grayscale-0 transition ease-in-out"
-            src={imanuel4}
+            src={process.env.PUBLIC_URL + '/images/imanuel_4.png'}
             alt=""
             animate={
               isInView
@@ -88,7 +87,7 @@ const About = () => {
           />
         </div>
         <m.div
-          className="lg:w-[500px] lg:mb-[50px]"
+          className="lg:w-[500px] lg:mb-[50px] w-[300px]"
           animate={
             isInView
               ? {
@@ -117,7 +116,7 @@ const About = () => {
           />
           <div
             ref={ref}
-            className="lg:ml-[50px] lg:text-[14px] text-justify font-light tracking-widest leading-[18px]"
+            className="lg:ml-[50px] lg:text-[14px] lg:mt-[0px] mt-[10px] text-[12px] text-justify font-light tracking-widest leading-[18px]"
           >
             Hello! I'm Imanuel, currently in my 7th semester at Kalbis Institute
             pursuing a major in Informatics with specialize major in Soft
@@ -129,7 +128,7 @@ const About = () => {
           </div>
         </m.div>
         <m.div
-          className="lg:w-[500px] ml-[300px]"
+          className="lg:w-[500px] lg:mt-0 lg:ml-[300px] w-[300px]  mt-[20px]"
           animate={
             isInView
               ? {
@@ -156,7 +155,7 @@ const About = () => {
             className="lg:mb-[20px] "
             style={{ borderColor: currentPalette[0] }}
           />
-          <div className="lg:ml-[50px] lg:text-[14px] text-justify font-light tracking-widest leading-[18px]">
+          <div className="lg:ml-[50px] lg:text-[14px] ml-[20px] lg:mt-[0px] mt-[10px] text-[12px]  text-justify font-light tracking-widest leading-[18px]">
             <ul className=" transition ease-in-out list-disc ">
               <li> Javascript</li>
               <li> PHP</li>

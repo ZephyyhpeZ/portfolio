@@ -91,7 +91,9 @@ const Experiences = () => {
           <div className="lg:ml-[120px] lg:mt-[30px]">
             {Object.keys(data).map((item, index) => (
               <m.div
-                className="border-l-2 pl-4 py-6 flex justify-between font-light tracking-wider text-[16px] cursor-pointer transition ease-in-out delay-75 group hover:bg-opacity-5 hover:bg-white"
+                className="border-l-2 lg:pl-4 lg:py-6 lg:text-[16px]
+                pl-4 py-3 text-[12px]
+                lg:flex justify-between font-light tracking-wider  cursor-pointer transition ease-in-out delay-75 group hover:bg-opacity-5 hover:bg-white"
                 key={item}
                 animate={
                   isInView
@@ -113,7 +115,7 @@ const Experiences = () => {
               >
                 <div>{data[item].company}</div>
                 <div
-                  className="absolute hidden  delay-75 transition duration-1000 ease-in-out mix-blend-difference group-hover:-translate-y-[7px] group-hover:block group-hover:opacity-100 opacity-0"
+                  className=" absolute hidden  delay-75 transition duration-1000 ease-in-out mix-blend-difference lg:group-hover:-translate-y-[7px] group-hover:-translate-y-[24px] group-hover:block group-hover:opacity-100 opacity-0"
                   style={{ color: currentPalette[0] }}
                 >
                   {data[item].company}
@@ -168,13 +170,12 @@ const Experiences = () => {
           <div className="lg:ml-[120px] lg:mt-[30px]">
             {Object.keys(dataAchivements).map((item, index) => (
               <m.div
-                className="border-l-2 pl-4 py-6 flex lg:pr-[10px] justify-between font-light tracking-wider text-[16px] cursor-pointer transition ease-in-out delay-75 group hover:bg-opacity-5 hover:bg-white"
+                className="border-l-2  lg:pl-4 lg:py-6 pl-4 py-3 lg:pr-[10px] lg:flex justify-between font-light tracking-wider lg:text-[16px] text-[12px] cursor-pointer transition ease-in-out delay-75 group hover:bg-opacity-5 hover:bg-white"
                 key={item}
                 animate={
                   isInView
                     ? {
                         opacity: 1,
-
                         transition: {
                           opacity: {
                             duration: 1,

@@ -1,11 +1,9 @@
 import { useScroll, useTransform, useInView, motion as m } from 'framer-motion';
 import { ColorPaletteContext } from '../components/colorPalettesContext';
 import { useRef, useEffect, useContext } from 'react';
-import imanuel from '../images/imanuel.png';
-import imanuel2 from '../images/imanuel_2.png';
+
 import imanuel3 from '../images/imanuel_3.png';
-import imanuel4 from '../images/imanuel_4.png';
-import imanuel5 from '../images/imanuel_5.png';
+
 const About = () => {
     const { colorPalettes, currentColorPaletteIndex, togglePalette } =
       useContext(ColorPaletteContext);

@@ -1,17 +1,11 @@
-import Navbar from './components/navbar';
-import Home from './pages/Home';
-import Introduction from './pages/Introduction';
-import About from './pages/About';
-import About1 from './pages/About1';
-import Experiences from './pages/Experiences';
-// import Projects from './pages/Projects';
-import Projects1 from './pages/Projects1';
-import Playground from './pages/Contact';
-import Loading from './pages/loading';
-import Contact from './pages/Contact';
-import Testing from './pages/testing';
-
+import Layout from './pages/Layout';
 import { motion as m } from 'framer-motion';
+import Loading from './pages/loading';
+import Testing from './pages/testing';
+import FourOfour from './pages/404'
+
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,14 +16,12 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
-
-
 function App() {
   const [isInitialLoading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 5000);
   }, []);
   const blur = {
     // backgroundImage: 'radial-gradient(#000 20%, transparent 10%)',
@@ -55,74 +47,18 @@ function App() {
   };
   return (
     <ColorPaletteProvider>
-      <div className="App">
-        {isInitialLoading ? (
-          <Loading />
-        ) : (
-          // <Testing>
-
-          // </Testing>
-          <div>
-            <Navbar />
-            <m.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 100 }}
-              exit={{ opacity: 0, transition: { duration: 0.5 } }}
-              transition={{
-                duration: 0.1,
-                delay: 1,
-                ease: 'easeInOut',
-              }}
-              style={blur}
-              className=" fixed lg:h-[20px] h-[10px] w-screen z-40"
-            />
-            <m.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 100 }}
-              exit={{ opacity: 0, transition: { duration: 0.5 } }}
-              transition={{
-                duration: 0.1,
-                delay: 1,
-                ease: 'easeInOut',
-              }}
-              style={blur}
-              className=" fixed h-screen w-[10px] lg:w-[20px]  z-40"
-            />
-            <m.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 100 }}
-              exit={{ opacity: 0, transition: { duration: 0.5 } }}
-              transition={{
-                duration: 0.1,
-                delay: 1,
-                ease: 'easeInOut',
-              }}
-              style={blur}
-              className=" fixed h-screen w-[10px] lg:w-[20px] right-0 z-40"
-            />
-            <m.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 100 }}
-              exit={{ opacity: 0, transition: { duration: 0.5 } }}
-              transition={{
-                duration: 0.1,
-                delay: 1,
-                ease: 'easeInOut',
-              }}
-              style={blur}
-              className=" fixed lg:h-[80px] h-[65px] bottom-0 w-screen z-40"
-            />
-            <Introduction />
-            <About1 />
-            <Experiences />
-            <Projects1 />
-            <Contact />
-            {/* <Home />
-            <About />
-            <Contact/> */}
-          </div>
-        )}
-      </div>
+      {isInitialLoading ? (
+        <Loading />
+      ) : (
+        // <Testing/>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />} />
+            <Route path="Testing" element={<Testing />} />
+            <Route path="404" element={<FourOfour />} />
+          </Routes>
+        </BrowserRouter>
+      )}
     </ColorPaletteProvider>
   );
 }

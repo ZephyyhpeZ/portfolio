@@ -26,7 +26,7 @@ const Loading = () => {
         initial={{ top: 0 }}
         animate={{ top: '100vh' }}
         transition={{
-          duration: 6,
+          duration: 4,
           delay: 0.7,
           ease: 'easeInOut',
         }}
@@ -37,7 +37,7 @@ const Loading = () => {
         initial={{ top: 0 }}
         animate={{ top: '100vh' }}
         transition={{
-          duration: 6,
+          duration: 4,
           ease: 'easeInOut',
         }}
       >
