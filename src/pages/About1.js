@@ -121,7 +121,7 @@ const About = () => {
             Hello! I'm Imanuel, currently in my 7th semester at Kalbis Institute
             pursuing a major in Informatics with specialize major in Soft
             Computing. Currently I'm busy with internship, where I'm working on
-            a real projects and applying my academic knowledge from what I've
+            real projects and applying my academic knowledge from what I've
             learned in my university. Additionally, I'm working on my own
             personal project where I can implement my understanding in computer
             science with things that interest me.

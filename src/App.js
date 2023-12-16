@@ -3,6 +3,7 @@ import { motion as m } from 'framer-motion';
 import Loading from './pages/loading';
 import Testing from './pages/testing';
 import FourOfour from './pages/404'
+import Music from './pages/music';
 
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -21,7 +22,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 10);
   }, []);
   const blur = {
     // backgroundImage: 'radial-gradient(#000 20%, transparent 10%)',
@@ -55,6 +56,7 @@ function App() {
           <Routes>
             <Route path="portfolio" element={<Layout />} />
             <Route path="portfolio/Testing" element={<Testing />} />
+            <Route path="portfolio/Music" element={<Music />} />
             <Route path="portfolio/404" element={<FourOfour />} />
           </Routes>
         </BrowserRouter>

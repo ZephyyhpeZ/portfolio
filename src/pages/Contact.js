@@ -56,7 +56,9 @@ function Contact() {
           }
           className=" lg:text-[50px] lg:leading-[50px] text-[20px] leading-[20px] mb-[70px] underline "
         >
-          <a href="">iim.imanuel@gmail.com</a>
+          <a href="mailto:iim.imanuel@gmail.com?subject=Subject%20Here&body=Hello%20Iim,">
+            iim.imanuel@gmail.com
+          </a>
         </m.div>
         <m.div
           animate={

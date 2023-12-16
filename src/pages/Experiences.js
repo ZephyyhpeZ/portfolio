@@ -1,16 +1,28 @@
 import { useScroll, useTransform, useInView, motion as m } from 'framer-motion';
 import { ColorPaletteContext } from '../components/colorPalettesContext';
-import { useRef, useEffect, useContext } from 'react';
+import { useRef, useEffect, useContext, useState } from 'react';
 import data from '../internshipsData.json';
 import dataAchivements from '../achivementsData.json';
+import CertificationModal from '../components/certificationModal';
 
 const Experiences = () => {
   const { colorPalettes, currentColorPaletteIndex, togglePalette } =
     useContext(ColorPaletteContext);
   const currentPalette = colorPalettes[currentColorPaletteIndex];
 
+  const [useImage, setImage] = useState('');
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const openModal = (img) => {
+    setImage(img);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   return (
     <div id="Experiences" className=" flex justify-center ">
@@ -170,6 +182,7 @@ const Experiences = () => {
           <div className="lg:ml-[120px] lg:mt-[30px]">
             {Object.keys(dataAchivements).map((item, index) => (
               <m.div
+                onClick={() => openModal(dataAchivements[item].certificate)}
                 className="border-l-2  lg:pl-4 lg:py-6 pl-4 py-3 lg:pr-[10px] lg:flex justify-between font-light tracking-wider lg:text-[16px] text-[12px] cursor-pointer transition ease-in-out delay-75 group hover:bg-opacity-5 hover:bg-white"
                 key={item}
                 animate={
@@ -198,6 +211,11 @@ const Experiences = () => {
           </div>
         </div>
       </div>
+      <CertificationModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        img={useImage}
+      />
     </div>
   );
 };

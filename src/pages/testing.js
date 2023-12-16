@@ -213,7 +213,7 @@ const Testing = () => {
                 data-function="end"
                 onClick={selectFunction}
               >
-                End Poin
+                End Point
               </li>
 
               <li

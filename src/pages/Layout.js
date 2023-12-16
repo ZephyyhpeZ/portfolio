@@ -48,67 +48,66 @@ function Layout() {
   const secondWave = {
     backgroundColor: 'blue',
   };
-  return (
-   
 
-            <div>
-              <Navbar />
-              <m.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 100 }}
-                exit={{ opacity: 0, transition: { duration: 0.5 } }}
-                transition={{
-                  duration: 0.1,
-                  delay: 1,
-                  ease: 'easeInOut',
-                }}
-                style={blur}
-                className=" fixed lg:h-[20px] h-[10px] w-screen z-40"
-              />
-              <m.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 100 }}
-                exit={{ opacity: 0, transition: { duration: 0.5 } }}
-                transition={{
-                  duration: 0.1,
-                  delay: 1,
-                  ease: 'easeInOut',
-                }}
-                style={blur}
-                className=" fixed h-screen w-[10px] lg:w-[20px]  z-40"
-              />
-              <m.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 100 }}
-                exit={{ opacity: 0, transition: { duration: 0.5 } }}
-                transition={{
-                  duration: 0.1,
-                  delay: 1,
-                  ease: 'easeInOut',
-                }}
-                style={blur}
-                className=" fixed h-screen w-[10px] lg:w-[20px] right-0 z-40"
-              />
-              <m.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 100 }}
-                exit={{ opacity: 0, transition: { duration: 0.5 } }}
-                transition={{
-                  duration: 0.1,
-                  delay: 1,
-                  ease: 'easeInOut',
-                }}
-                style={blur}
-                className=" fixed lg:h-[80px] h-[65px] bottom-0 w-screen z-40"
-              />
-              <Introduction />
-              <About1 />
-              <Experiences />
-              <Projects1 />
-              <Contact />
-            </div>
-       
-      
+
+
+  return (
+    <div>
+      <Navbar />
+      <m.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 100 }}
+        exit={{ opacity: 0, transition: { duration: 0.5 } }}
+        transition={{
+          duration: 0.1,
+          delay: 1,
+          ease: 'easeInOut',
+        }}
+        style={blur}
+        className=" fixed lg:h-[20px] h-[10px] w-screen z-40"
+      />
+      <m.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 100 }}
+        exit={{ opacity: 0, transition: { duration: 0.5 } }}
+        transition={{
+          duration: 0.1,
+          delay: 1,
+          ease: 'easeInOut',
+        }}
+        style={blur}
+        className=" fixed h-screen w-[10px] lg:w-[20px]  z-40"
+      />
+      <m.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 100 }}
+        exit={{ opacity: 0, transition: { duration: 0.5 } }}
+        transition={{
+          duration: 0.1,
+          delay: 1,
+          ease: 'easeInOut',
+        }}
+        style={blur}
+        className=" fixed h-screen w-[10px] lg:w-[20px] right-0 z-40"
+      />
+      <m.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 100 }}
+        exit={{ opacity: 0, transition: { duration: 0.5 } }}
+        transition={{
+          duration: 0.1,
+          delay: 1,
+          ease: 'easeInOut',
+        }}
+        style={blur}
+        className=" fixed lg:h-[80px] h-[65px] bottom-0 w-screen z-40"
+      />
+      <Introduction />
+      <About1 />
+      <Experiences />
+      <Projects1 />
+      <Contact />
+    </div>
   );
 }
 
