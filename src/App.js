@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {
+  Routes,
+  Route,
+  useLocation,
+} from 'react-router-dom';
+import Layout from './Layout';
+import Pathfinding from './Pages/Pathfinding';
+import World from './Pages/World';
+import Music from './Pages/Music';
+import Test from './Pages/Test';
+import Isometric from './Pages/Isometric';
+import { AnimatePresence } from 'framer-motion';
 function App() {
+const location =  useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="portfolio" element={<Layout />} />
+        <Route
+          path="portfolio/projects/pathfinding"
+          element={<Pathfinding />}
+        />
+        <Route path="portfolio/projects/music" element={<Music />} />
+        <Route path="portfolio/experiments/earth" element={<World />} />
+        <Route path="portfolio/experiments/planets" element={<Test />} />
+        <Route path="portfolio/experiments/isometric" element={<Isometric />} />
+      </Routes>
+    </AnimatePresence>
   );
 }
 

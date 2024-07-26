@@ -1,0 +1,25 @@
+{
+  "1": {
+    "title": "Pathfinding Visualization",
+    "desc": "A web based pathfinding algorithm visualization with an interactive interface that allows users to observe and analyze the the workings of diverse pathfinding algorithm. (I made this in python at first then i turned it into web, might add more feature) ",
+    "src": "/images/image.png",
+    "utilities": {
+      "first": "React",
+      "second": "Tailwind"
+    },
+    "link": "projects/pathfinding"
+
+  },
+  "2": {
+    "title": "Lyric Finder",
+    "desc": "A web based lyric finder made using react. This was made using YouTube-Music-API by Paxenisx0. This website Allows you to search for lyric of your desired song",
+    "src": "/images/music.png",
+    "utilities":{
+      "first": "React",
+      "second": "Tailwind",
+      "third": "API"
+    },
+    "link": "projects/music"
+    
+  }
+}
