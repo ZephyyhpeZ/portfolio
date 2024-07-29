@@ -28,6 +28,7 @@ const Project = () => {
       });
     });
   }
+  
   useEffect(() => {
     const element = scrollRef.current;
     if (element) {
@@ -49,8 +50,13 @@ const Project = () => {
     if (index == selectedId) {
       setIsExpanded(!isExpanded);
       setId(index);
+    console.log(1);
+
     } else {
+      setIsExpanded(!isExpanded);
       setId(index);
+    console.log(2);
+
     }
   };
 
@@ -63,6 +69,7 @@ const Project = () => {
     open: { opacity: 1 },
     closed: { opacity: 0, width: 0 },
   };
+  
   return (
     <div
       className="Project lg:px-[110px] lg:h-[80vh] lg:mb-[100px] mb-[400px] h-[80vh] px-[20px] "

@@ -14,8 +14,19 @@ const Experience = () => {
     >
       <m.div
         className="  text-right font-light lg:text-[18px]"
-        initial={{ y: 10, opacity: 0 }}
-        animate={{ y: 0, opacity: 100 }}
+        initial={{
+          clipPath: 'polygon(0 0, 0 0, 0 100%, 0 100%)',
+        }}
+        animate={
+          isInView
+            ? {
+                clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+              }
+            : {
+                opacity: 0,
+                clipPath: 'polygon(0 0, 0 0, 0 100%, 0 100%)',
+              }
+        }
         transition={{
           delay: initialDelay - 0.3,
           duration: 0.5,

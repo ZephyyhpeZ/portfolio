@@ -42,21 +42,15 @@ const ImageBackgroundDetector = ({ imageUrl, hex }) => {
       const averageG = Math.round(sumG / count);
       const averageB = Math.round(sumB / count);
 
-      const [red, green, blue] = darkenedColor(averageR, averageG, averageB, 1);
+      const [red, green, blue] = [averageR, averageG, averageB];
 
       const hexCode = rgbToHex(red, green, blue);
 
       hex(hexCode);
     };
   }, [imageUrl, hex]);
-  const darkenedColor = (r, g, b, factor) => {
-    const darkenedR = Math.round(r * factor);
-    const darkenedG = Math.round(g * factor);
-    const darkenedB = Math.round(b * factor);
 
-    return [darkenedR, darkenedG, darkenedB];
-  };
-
+  //turn to hex
   const rgbToHex = (r, g, b) =>
     `#${((r << 16) | (g << 8) | b).toString(16).padStart(6, '0')}`;
 
@@ -78,6 +72,7 @@ function Music() {
   const loadingAnimation = <FontAwesomeIcon icon={faSpinner} spinPulse />;
 
   const scrollRef = useRef(null);
+  const lyricContainer = useRef(null);
 
   function force_scroll_sideways(element) {
     element.addEventListener('wheel', (event) => {
@@ -193,13 +188,16 @@ function Music() {
     }
   };
 
+  const autoScroll = async () => {
+    console.log(lyricContainer);
+  };
+
   return (
     <>
-      <Transition />
       <div
-        className="flex flex-col justify-center items-center h-screen w-screen gap-5 overflow-y-hidden text-[white]"
+        className="flex flex-col justify-center items-center h-screen w-screen gap-5 overflow-y-hidden text-[white] "
         style={{
-          background: `linear-gradient( ${gradient}, rgba(10, 10, 10, 0.1)`,
+          background: `linear-gradient( ${gradient}, rgba(10, 10, 10, 0.5)`,
           transition: 'background 0.8s ease-in-out',
         }}
       >
@@ -214,23 +212,85 @@ function Music() {
           <>
             {lyric && (
               <div
+                ref={lyricContainer}
                 id="lyric"
-                className="h-[300px] w-[500px] overflow-y-scroll text-xl font-bold scroll-smooth"
+                className="lg:h-[300px] lg:w-[30vw] overflow-y-scroll text-xl font-bold scroll-smooth  h-[300px] w-[90vw]"
                 dangerouslySetInnerHTML={{ __html: lyric }}
               ></div>
             )}
           </>
         )}
-        <div>
-          <m.input
-            type="text"
-            onChange={(e) => setSearchTerm(e.target.value)}
-            onKeyDown={onKeyPress}
-            placeholder="Search..."
-            whileTap={{ scale: 1.1 }}
-            className="lg:w-[200px] lg:h-[35px] bg-transparent border rounded-2xl px-2 text-[white]"
-          />
+        <div className="flex flex-col">
+          <div className="lg:h-[35px]  flex items-center justify-center">
+            <m.input
+              type="text"
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyDown={onKeyPress}
+              placeholder="Search..."
+              whileTap={{ scale: 1.1 }}
+              className="lg:w-[200px] h-full bg-transparent border rounded-l-2xl  px-2 text-[white] "
+            />
+            <m.button
+              className="h-full px-[5px] "
+              whileTap={{ scale: 1.5 }}
+              onClick={handleSearch}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                focusable="false"
+                aria-hidden="true"
+              >
+                <path d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909zM18 11a7 7 0 00-14 0 7 7 0 1014 0z"></path>
+              </svg>
+            </m.button>
+          </div>
+          {/* <div className="lg:h-[35px]  flex items-center justify-center">
+            <m.button className="h-full px-[5px] " whileTap={{ scale: 1.5 }}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              >
+                <rect
+                  x="6"
+                  y="6"
+                  width="16"
+                  height="16"
+                  stroke="currentColor"
+                  fill="none"
+                  strokeWidth="1"
+                />
+              </svg>
+            </m.button>
+            <m.button
+              className="h-full px-[5px] "
+              onClick={autoScroll}
+              whileTap={{ scale: 1.5 }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="22"
+                height="22"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 3L19 12L5 21V3Z"
+                  stroke="currentColor"
+                  fill="none"
+                  strokeWidth="1"
+                />
+              </svg>
+            </m.button>
+          </div> */}
         </div>
+
         <div
           ref={scrollRef}
           className="  flex grid-rows-3 gap-4 flex-nowrap overflow-x-scroll w-screen py-3 overflow-y-hidden "

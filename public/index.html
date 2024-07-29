@@ -8,13 +8,6 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script>
-      // Parse the URL to handle redirects
-      var path = window.location.search.substr(1);
-      if (path) {
-        var newUrl = window.location.origin + '/' + path;
-        window.history.replaceState(null, null, newUrl);
-      }
-    </script>
+
   </body>
 </html>

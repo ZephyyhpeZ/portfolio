@@ -15,15 +15,15 @@ const location =  useLocation();
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="portfolio" element={<Layout />} />
+        <Route path="/" element={<Layout />} />
         <Route
-          path="portfolio/projects/pathfinding"
+          path="/projects/pathfinding"
           element={<Pathfinding />}
         />
-        <Route path="portfolio/projects/music" element={<Music />} />
-        <Route path="portfolio/experiments/earth" element={<World />} />
-        <Route path="portfolio/experiments/planets" element={<Test />} />
-        <Route path="portfolio/experiments/isometric" element={<Isometric />} />
+        <Route path="/projects/music" element={<Music />} />
+        <Route path="experiments/earth" element={<World />} />
+        <Route path="/experiments/planets" element={<Test />} />
+        <Route path="/experiments/isometric" element={<Isometric />} />
       </Routes>
     </AnimatePresence>
   );

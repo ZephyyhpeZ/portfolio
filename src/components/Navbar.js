@@ -64,23 +64,15 @@ function Navbar(props) {
           animate={{ opacity: 100 }}
           exit={{ opacity: 0, transition: { duration: 0.5 } }}
           transition={{
-            delay: 0.9,
             duration: 1,
             ease: 'easeInOut',
-            delay: props.customDelay,
+            delay: props.customDelay + 0.9,
           }}
           className="flex justify-between mx-5 lg:mx-14 "
         >
           <h1 className="lg:text-xl text-3xl">
             <a href="#Home">
-              <m.svg
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 100 }}
-                transition={{
-                  delay: props.customDelay + 7,
-                  duration: 1,
-                  ease: 'easeInOut',
-                }}
+              <svg
                 width="26"
                 height="26"
                 viewBox="0 0 105 106"
@@ -94,7 +86,7 @@ function Navbar(props) {
                 />
                 <path d="M44.2887 48V0H23V48H44.2887Z" fill="#7D49D9" />
                 <path d="M82 48V0H60.7113V48H82Z" fill="#7D49D9" />
-              </m.svg>
+              </svg>
             </a>
           </h1>
           <div>XL</div>

@@ -13,7 +13,7 @@ const About = () => {
       <div className="flex h-[100%] lg:flex-row flex-col ">
         <div className="relative lg:w-1/3 lg:justify-end flex w-full">
           <m.div
-            className="absolute lg:top-1/2 lg:translate-x-[-240px] lg:-mt-[210px] translate-y-[-30px]"
+            className="absolute lg:top-1/2 lg:translate-x-[-240px] lg:-mt-[210px] lg:translate-y-[0] translate-y-[-30px]"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 100 } : { opacity: 0 }}
             transition={{
